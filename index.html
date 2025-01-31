@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nature's Platter</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
@@ -25,19 +26,51 @@
         }
       </script>
       <style>
-        @keyframes sliding {
+        @keyframes slide-in-left {
           from {
-            width: 0;
+              transform: translateX(-100%);
+              opacity: 0;
           }
           to {
-            width: 100%;
+              transform: translateX(0);
+              opacity: 1;
           }
         }
-        .animate-sliding {
-          display: inline-block;
-          width: 0;
-          animation: sliding 5s forwards;
+
+        @keyframes slide-in-right {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
         }
+
+        @keyframes slide-in-bottom {
+            from {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }     
+
+        .animate-slide-in-left {
+              animation: slide-in-left 1s ease-out;
+          }
+
+        .animate-slide-in-right {
+            animation: slide-in-right 1s ease-out;
+        }
+
+        .animate-slide-in-bottom {
+          animation: slide-in-bottom 1s ease-out;
+        }
+                  
       </style>
 </head>
 <body>
@@ -64,12 +97,55 @@
       </div>
   </header> 
   <main>
-    <div class="bg-gradient-to-t from-color-b to-color-b2 my-20 ">
-      <h1 class="text-4xl lg:text-6xl font-semibold text-center mb-2 lg:mb-5 overflow-hidden whitespace-nowrap animate-sliding mx-auto">Freshness <span class="text-color-g"> You Can <br>
-        Count</span> On, Prices You’ll Love.</h1>
-        <p class="text-xl font-normal text-center my-5 mx-10 lg:mx-auto">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br> staples, we’ve got you covered every day.</p>
-        <img class="flex items-center justify-center mx-auto" src="assets/hero-vegetables.png" alt="">
-    </div>
+    <div class="bg-gradient-to-t from-color-b to-color-b2 my-20">
+      <!-- Heading -->
+      <h1 class="text-3xl lg:text-6xl font-semibold text-center mb-2 lg:mb-5 mx-auto overflow-hidden">
+          <!-- First part (left to middle) -->
+          <span class="block animate-slide-in-left">Freshness <span class="text-color-g">You Can Count On,</span></span>
+          <!-- Second part (left to middle) -->
+          <span class="block animate-slide-in-left">Prices You’ll Love.</span>
+      </h1>
+  
+      <!-- Paragraph (right to middle) -->
+      <p class="text-lg lg:text-xl font-normal text-center my-5 mx-5 lg:mx-auto animate-slide-in-right">
+          Shop your daily essentials at unbeatable prices. From fresh produce to pantry staples, we’ve got you covered every day.
+      </p>
+  
+      <!-- Image (bottom to top) -->
+      <img class="flex items-center justify-center mx-auto animate-slide-in-bottom" src="assets/hero-vegetables.png" alt="">
+  </div>
+    <section>
+      <h1 class="text-2xl lg:text-4xl font-semibold text-color-g mb-10 ml-10 lg:ml-52">Services</h1>
+        <div class="flex flex-col lg:flex-row ml-10 lg:ml-52 mb-20 mr-10 lg:mr-0 gap-10">
+          <div class="w-full lg:w-[424px] h-[367px] rounded-xl bg-color-b">
+              <div class="avatar flex justify-center">
+                  <div class="ring-primary ring-offset-base-100 w-36 rounded-full mt-10">
+                      <img class="p-5 bg-white" src="assets/service.png" alt="">
+                  </div>
+              </div>
+              <h2 class="text-2xl font-semibold text-center">24/7 Services</h2>
+              <p class="text-xl font-light text-center p-5">We’re always open. Order your favorite food anytime, anywhere, hassle-free.</p>
+          </div>
+          <div class="w-full lg:w-[424px] h-[367px] rounded-xl bg-color-b">
+              <div class="avatar flex justify-center">
+                  <div class="ring-primary ring-offset-base-100 w-36 rounded-full mt-10">
+                      <img class="p-5 bg-white" src="assets/delivery.png" alt="">
+                  </div>
+              </div>
+              <h2 class="text-2xl font-semibold text-center">Fast Delivery</h2>
+              <p class="text-xl font-light text-center p-5">Fresh and delicious food delivered to your doorstep in no time. Satisfaction guaranteed.</p>
+          </div>
+          <div class="w-full lg:w-[424px] h-[367px] rounded-xl bg-color-b">
+              <div class="avatar flex justify-center">
+                  <div class="ring-primary ring-offset-base-100 w-36 rounded-full mt-10">
+                      <img class="p-5 bg-white" src="assets/healthy.png" alt="">
+                  </div>
+              </div>
+              <h2 class="text-2xl font-semibold text-center">Healthy Products</h2>
+              <p class="text-xl font-light text-center p-5">Enjoy nutritious, high-quality ingredients for a healthier lifestyle. Eat fresh, stay fit.</p>
+          </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>
