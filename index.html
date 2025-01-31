@@ -24,6 +24,21 @@
           }
         }
       </script>
+      <style>
+        @keyframes sliding {
+          from {
+            width: 0;
+          }
+          to {
+            width: 100%;
+          }
+        }
+        .animate-sliding {
+          display: inline-block;
+          width: 0;
+          animation: sliding 5s forwards;
+        }
+      </style>
 </head>
 <body>
   <header class="container flex items-center justify-center lg:mx-auto">
@@ -50,9 +65,9 @@
   </header> 
   <main>
     <div class="bg-gradient-to-t from-color-b to-color-b2 my-20 ">
-      <h1 class="text-6xl font-semibold text-center mb-5">Freshness <span class="text-color-g"> You Can <br>
-        Count</span> On, Prices You’ll Love!</h1>
-        <p class="text-xl font-normal text-center my-5">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br> staples, we’ve got you covered every day.</p>
+      <h1 class="text-4xl lg:text-6xl font-semibold text-center mb-2 lg:mb-5 overflow-hidden whitespace-nowrap animate-sliding mx-auto">Freshness <span class="text-color-g"> You Can <br>
+        Count</span> On, Prices You’ll Love.</h1>
+        <p class="text-xl font-normal text-center my-5 mx-10 lg:mx-auto">Shop your daily essentials at unbeatable prices. From fresh produce to pantry <br> staples, we’ve got you covered every day.</p>
         <img class="flex items-center justify-center mx-auto" src="assets/hero-vegetables.png" alt="">
     </div>
   </main>
