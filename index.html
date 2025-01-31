@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,29 @@
         }
       </script>
 </head>
-<body> 
+<body>
+  <header class="container flex items-center justify-center lg:mx-auto">
+    <div class="navbar bg-base-100 border-2 border-color-g lg:border-none">
+        <div class="navbar-start">
+          <img class="hidden lg:flex" src="assets/logo-header.png" alt="nature platter logo">
+          <img class="flex lg:hidden" src="assets/logo.png" alt="">
+        </div>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li class="text-xl font-normal"><a>Product</a></li>
+            <li class="text-xl font-normal"><a>Service</a></li>
+            <li class="text-xl font-normal"><a>Contact us</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <i class="fa-solid fa-magnifying-glass fa-xl mr-5 mt-2 hidden lg:flex" style="color: #000000;"></i>
+          <i class="fa-solid fa-cart-shopping fa-flip-horizontal fa-xl mr-5 mt-2 hidden lg:flex" style="color: #050505;"></i>
+          <a class="btn w-[130px] bg-white text-black text-xl font-normal hidden lg:flex mr-2 border-1 border-color-g">Login</a>
+          <a class="btn bg-color-g text-white w-[146px] text-xl font-normal hidden lg:flex">Register</a>
+          <i class="fa-solid fa-bars fa-xl flex lg:hidden" style="color: #179800;"></i>
+        </div>
+      </div>
+  </header> 
+  
 </body>
 </html>
